@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Conciergerie – Booking Strasbourg</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --blue: #003580;
+    --blue-light: #0071c2;
+    --accent: #febb02;
+    --green: #00a651;
+    --red: #e74c3c;
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    color: white; padding: 28px 36px;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 4px 20px rgba(0,53,128,0.3);
+  }
+  header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: -0.3px; }
+  header h1 span { color: var(--accent); }
+  header p { font-size: 0.85rem; opacity: 0.8; margin-top: 4px; }
+  .badge {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* LAYOUT */
+  main { max-width: 1300px; margin: 0 auto; padding: 28px 24px; }
+  .section-title {
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.5px; color: var(--muted); margin: 28px 0 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after { content:''; flex:1; height:1px; background:var(--border); }
+
+  /* KPI CARDS */
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .kpi-card {
+    background: var(--card); border-radius: 14px; padding: 20px 22px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06); border-top: 4px solid var(--blue-light);
+    position: relative; overflow: hidden;
+  }
+  .kpi-card.green { border-top-color: var(--green); }
+  .kpi-card.red   { border-top-color: var(--red); }
+  .kpi-card.amber { border-top-color: var(--accent); }
+  .kpi-label { font-size: 0.72rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; }
+  .kpi-value { font-size: 2rem; font-weight: 800; line-height: 1.1; margin: 6px 0 2px; color: var(--blue); }
+  .kpi-card.green .kpi-value { color: var(--green); }
+  .kpi-card.red   .kpi-value { color: var(--red); }
+  .kpi-card.amber .kpi-value { color: #b45309; }
+  .kpi-sub { font-size: 0.75rem; color: var(--muted); }
+
+  /* CHART GRID */
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 20px; }
+  .chart-card {
+    background: var(--card); border-radius: 14px; padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .chart-card h3 {
+    font-size: 0.92rem; font-weight: 700; color: var(--text);
+    margin-bottom: 4px;
+  }
+  .chart-card p.chart-sub { font-size: 0.75rem; color: var(--muted); margin-bottom: 18px; }
+  .chart-wrap { position: relative; height: 260px; }
+  .chart-wrap-tall { position: relative; height: 320px; }
+
+  /* INSIGHT BOXES */
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 8px; }
+  .insight-box {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border-radius: 12px; padding: 18px 20px;
+    border-left: 4px solid var(--blue-light);
+  }
+  .insight-box.green { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-left-color: var(--green); }
+  .insight-box.amber { background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border-left-color: var(--accent); }
+  .insight-box h4 { font-size: 0.82rem; font-weight: 700; color: var(--blue); margin-bottom: 6px; }
+  .insight-box.green h4 { color: #15803d; }
+  .insight-box.amber h4 { color: #92400e; }
+  .insight-box p { font-size: 0.8rem; color: var(--text); line-height: 1.5; }
+
+  /* ECONOMY BAR */
+  .eco-card {
+    background: var(--card); border-radius: 14px; padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    display: flex; gap: 40px; align-items: center; flex-wrap: wrap;
+  }
+  .eco-text h3 { font-size: 1rem; font-weight: 700; }
+  .eco-text p { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  .eco-bar-wrap { flex: 1; min-width: 260px; }
+  .eco-label { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .eco-bar-bg { background: #e5e7eb; border-radius: 99px; height: 18px; overflow: hidden; }
+  .eco-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--green), #4ade80); transition: width 1.5s ease; }
+  .eco-numbers { display: flex; gap: 30px; flex-wrap: wrap; }
+  .eco-num { text-align: center; }
+  .eco-num .val { font-size: 1.3rem; font-weight: 800; color: var(--blue); }
+  .eco-num .lab { font-size: 0.7rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+
+  /* FOOTER */
+  footer {
+    text-align: center; padding: 24px; font-size: 0.75rem; color: var(--muted);
+    border-top: 1px solid var(--border); margin-top: 40px;
+  }
+
+  /* CORRELATION NOTE */
+  .corr-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #fee2e2; color: #991b1b; border-radius: 8px;
+    padding: 6px 12px; font-size: 0.76rem; font-weight: 700; margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>📊 Analytics <span>Conciergerie</span></h1>
+    <p>Booking Strasbourg · Responsable Conciergerie · 500 réservations analysées</p>
+  </div>
+  <div class="badge">🎯 Objectif : Réduire les coûts de 10%</div>
+</header>
+
+<main>
+
+  <!-- KPIs -->
+  <div class="section-title">Indicateurs Clés de Performance</div>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Réservations</div>
+      <div class="kpi-value">500</div>
+      <div class="kpi-sub">Dataset analysé · 2023</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">NPS Moyen</div>
+      <div class="kpi-value">6,32</div>
+      <div class="kpi-sub">Score satisfaction / 10</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">Coût Moyen</div>
+      <div class="kpi-value">109€</div>
+      <div class="kpi-sub">Par réservation (personnel + maintenance)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Attente Check-in</div>
+      <div class="kpi-value">13,3<span style="font-size:1rem">min</span></div>
+      <div class="kpi-sub">Temps moyen · pic à 23min après 21h</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-label">Taux Réclamation</div>
+      <div class="kpi-value">59,2%</div>
+      <div class="kpi-sub">1er motif : Check-in tardif (19%)</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Corrélation r</div>
+      <div class="kpi-value">−0,15</div>
+      <div class="kpi-sub">Attente ↗ → Satisfaction ↘</div>
+    </div>
+  </div>
+
+  <!-- CHARTS ROW 1 -->
+  <div class="section-title">Analyse de la Satisfaction Client</div>
+  <div class="chart-grid">
+
+    <!-- SCATTER PLOT -->
+    <div class="chart-card">
+      <h3>⏱ Temps d'Attente Check-in vs Score NPS</h3>
+      <p class="chart-sub">Corrélation négative (r = −0,148) · Plus l'attente augmente, plus la note baisse</p>
+      <div class="chart-wrap-tall"><canvas id="scatterChart"></canvas></div>
+      <div class="corr-badge">⚠️ Chaque +10 min d'attente coûte ~0,2 point de NPS</div>
+    </div>
+
+    <!-- RECLAMATIONS PIE -->
+    <div class="chart-card">
+      <h3>📋 Répartition des Réclamations</h3>
+      <p class="chart-sub">Motifs identifiés · 296 réclamations sur 500 réservations</p>
+      <div class="chart-wrap"><canvas id="reclamChart"></canvas></div>
+    </div>
+
+  </div>
+
+  <!-- CHARTS ROW 2 -->
+  <div class="section-title">Analyse Opérationnelle & Flux</div>
+  <div class="chart-grid">
+
+    <!-- MONTHLY COSTS -->
+    <div class="chart-card">
+      <h3>📅 Coûts & Réservations par Mois</h3>
+      <p class="chart-sub">Anticipation des pics de flux pour optimiser la planification d'équipe</p>
+      <div class="chart-wrap-tall"><canvas id="monthChart"></canvas></div>
+    </div>
+
+    <!-- ATTENTE PAR TRANCHE -->
+    <div class="chart-card">
+      <h3>🕐 Temps d'Attente Moyen par Tranche Horaire</h3>
+      <p class="chart-sub">Pic critique après 21h → renforcement équipe nécessaire</p>
+      <div class="chart-wrap"><canvas id="horaireChart"></canvas></div>
+    </div>
+
+  </div>
+
+  <!-- NPS PAR LOGEMENT -->
+  <div class="section-title">Performance par Type de Logement</div>
+  <div class="chart-grid">
+    <div class="chart-card">
+      <h3>🏠 NPS Moyen par Type de Logement</h3>
+      <p class="chart-sub">Identifier les segments nécessitant une attention particulière</p>
+      <div class="chart-wrap"><canvas id="npsLogChart"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <h3>💰 Décomposition des Coûts par Mois</h3>
+      <p class="chart-sub">Personnel · Maintenance · Surcoût Réclamations</p>
+      <div class="chart-wrap-tall"><canvas id="coutDecompChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ÉCONOMIES -->
+  <div class="section-title">Objectif Business · Réduction des Coûts -10%</div>
+  <div class="eco-card">
+    <div class="eco-text">
+      <h3>💡 Plan de Réduction des Coûts Opérationnels</h3>
+      <p>Par anticipation des pics de flux et optimisation des plannings d'équipe (2 personnes)</p>
+    </div>
+    <div class="eco-bar-wrap">
+      <div class="eco-label"><span>Progression vers l'objectif</span><span id="pctLabel">0%</span></div>
+      <div class="eco-bar-bg"><div class="eco-bar-fill" id="ecoBar" style="width:0%"></div></div>
+    </div>
+    <div class="eco-numbers">
+      <div class="eco-num">
+        <div class="val">54 694 €</div>
+        <div class="lab">Coût actuel</div>
+      </div>
+      <div class="eco-num">
+        <div class="val" style="color:var(--green)">49 225 €</div>
+        <div class="lab">Coût cible</div>
+      </div>
+      <div class="eco-num">
+        <div class="val" style="color:var(--accent)">5 469 €</div>
+        <div class="lab">Économies visées</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS -->
+  <div class="section-title">Recommandations Data-Driven</div>
+  <div class="insight-grid">
+    <div class="insight-box">
+      <h4>⏰ Optimisation Planning Check-in</h4>
+      <p>Les arrivées après 21h génèrent 23 min d'attente en moyenne (+65% vs 14-16h). Prévoir un agent dédié en soirée pendant la haute saison réduit l'attente de ~40% selon la simulation.</p>
+    </div>
+    <div class="insight-box amber">
+      <h4>🧹 Réduire les Réclamations Ménage</h4>
+      <p>19% des réclamations concernent le ménage. Chaque réclamation coûte 25€ en gestion. Une checklist qualité pré-départ pour l'équipe permettrait d'économiser ~2 375€/an.</p>
+    </div>
+    <div class="insight-box green">
+      <h4>📈 Planification par Data</h4>
+      <p>Les mois de janvier (+6%), août (+4%) et novembre (+6%) affichent les coûts les plus élevés. Anticiper le renforcement d'équipe 2 semaines avant ces pics permettrait d'absorber la charge sans surcoût d'urgence.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Dashboard Analytics Conciergerie · Booking Strasbourg · Projet Bachelor Business & Data
+  · Données simulées à partir de 500 réservations · Généré avec Python & Chart.js
+</footer>
+
+<script>
+// ── DATA ────────────────────────────────────────────────────────────────────
+const scatter = [{"temps_attente_min":14.1,"score_nps":7.2,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":28.5,"score_nps":5.7,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":21.8,"score_nps":4.9,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":39.4,"score_nps":5.7,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":1.8,"score_nps":5.4,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":0.9,"score_nps":5.1,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":15.4,"score_nps":4.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":4.6,"score_nps":3.7,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":30.1,"score_nps":6.4,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":17.9,"score_nps":7.2,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":0.5,"score_nps":7.4,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":26.5,"score_nps":6.2,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":19.5,"score_nps":5.7,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":5.7,"score_nps":6.6,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":7.9,"score_nps":4.2,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":20.9,"score_nps":6.5,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":0.2,"score_nps":6.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":23.9,"score_nps":5.9,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":15.3,"score_nps":3.8,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":10.3,"score_nps":6.7,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":24.5,"score_nps":6.4,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":1.2,"score_nps":8.1,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":9.1,"score_nps":7.0,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":3.6,"score_nps":6.5,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":18.9,"score_nps":4.2,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":2.6,"score_nps":5.5,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":1.9,"score_nps":5.0,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":52.0,"score_nps":6.6,"type_logement":"Appartement T3","haute_saison":true},{"temps_attente_min":15.1,"score_nps":5.6,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":49.0,"score_nps":5.8,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":17.0,"score_nps":6.7,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":14.1,"score_nps":9.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":2.8,"score_nps":6.9,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":13.2,"score_nps":6.5,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":19.9,"score_nps":8.3,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":14.4,"score_nps":4.8,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":10.8,"score_nps":3.8,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":1.2,"score_nps":5.2,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":11.2,"score_nps":6.6,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":24.5,"score_nps":3.0,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":8.6,"score_nps":6.8,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":31.2,"score_nps":5.6,"type_logement":"Appartement T3","haute_saison":true},{"temps_attente_min":15.0,"score_nps":5.9,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":7.6,"score_nps":6.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":0.7,"score_nps":7.7,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":20.9,"score_nps":7.1,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":0.6,"score_nps":6.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":14.4,"score_nps":4.7,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":15.1,"score_nps":4.8,"type_logement":"Appartement T3","haute_saison":true},{"temps_attente_min":0.5,"score_nps":8.5,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":11.5,"score_nps":8.3,"type_logement":"Appartement T3","haute_saison":true},{"temps_attente_min":0.9,"score_nps":8.0,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":22.2,"score_nps":8.5,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":32.7,"score_nps":5.4,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":15.5,"score_nps":7.5,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":44.4,"score_nps":6.9,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":5.9,"score_nps":8.2,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":2.8,"score_nps":8.1,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":0.6,"score_nps":5.5,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":5.6,"score_nps":6.8,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":12.7,"score_nps":4.8,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":9.8,"score_nps":6.5,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":0.4,"score_nps":6.2,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":0.6,"score_nps":6.9,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":4.1,"score_nps":9.1,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":11.8,"score_nps":6.5,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":2.1,"score_nps":7.8,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":2.6,"score_nps":4.7,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":13.0,"score_nps":6.2,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":36.3,"score_nps":6.6,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":4.2,"score_nps":6.9,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":18.9,"score_nps":5.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":3.1,"score_nps":6.9,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":5.2,"score_nps":5.0,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":2.0,"score_nps":4.7,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":8.2,"score_nps":8.1,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":30.9,"score_nps":3.7,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":7.4,"score_nps":7.6,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":15.4,"score_nps":8.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":8.3,"score_nps":4.3,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":1.0,"score_nps":6.2,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":35.8,"score_nps":6.1,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":5.6,"score_nps":5.9,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":18.1,"score_nps":9.0,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":7.1,"score_nps":5.3,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":7.8,"score_nps":7.0,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":0.6,"score_nps":7.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":14.4,"score_nps":6.6,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":2.2,"score_nps":6.5,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":18.8,"score_nps":6.0,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":13.8,"score_nps":7.4,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":18.1,"score_nps":4.7,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":6.4,"score_nps":6.6,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":23.5,"score_nps":5.9,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":1.2,"score_nps":8.2,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":27.0,"score_nps":6.6,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":22.2,"score_nps":6.0,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":12.0,"score_nps":6.0,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":2.7,"score_nps":4.9,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":1.1,"score_nps":6.6,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":12.6,"score_nps":7.1,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":16.7,"score_nps":7.4,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":11.0,"score_nps":5.5,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":14.6,"score_nps":5.8,"type_logement":"Suite","haute_saison":true},{"temps_attente_min":0.0,"score_nps":4.9,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":5.7,"score_nps":7.2,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":0.4,"score_nps":6.8,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":9.0,"score_nps":9.7,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":9.8,"score_nps":4.7,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":15.2,"score_nps":5.2,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":14.6,"score_nps":7.4,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":0.0,"score_nps":8.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":18.0,"score_nps":5.2,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":23.4,"score_nps":4.5,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":11.0,"score_nps":6.9,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":0.9,"score_nps":8.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":3.6,"score_nps":6.3,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":2.5,"score_nps":9.1,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":14.8,"score_nps":7.1,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":16.3,"score_nps":7.4,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":12.4,"score_nps":5.8,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":17.8,"score_nps":6.1,"type_logement":"Suite","haute_saison":false},{"temps_attente_min":10.2,"score_nps":4.7,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":19.3,"score_nps":7.1,"type_logement":"Appartement T3","haute_saison":false},{"temps_attente_min":9.8,"score_nps":3.1,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":40.7,"score_nps":7.5,"type_logement":"Appartement T2","haute_saison":true},{"temps_attente_min":0.7,"score_nps":4.1,"type_logement":"Studio","haute_saison":false},{"temps_attente_min":9.3,"score_nps":7.5,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":18.0,"score_nps":5.3,"type_logement":"Appartement T2","haute_saison":false},{"temps_attente_min":21.5,"score_nps":5.1,"type_logement":"Studio","haute_saison":true},{"temps_attente_min":25.1,"score_nps":6.1,"type_logement":"Appartement T2","haute_saison":true}];
+
+const moisLabels = ['Jan','Fév','Mar','Avr','Mai','Jun','Jui','Aoû','Sep','Oct','Nov','Déc'];
+const nbRes      = [53,42,33,44,38,31,43,50,35,44,43,44];
+const coutMoyen  = [109.0,104.9,111.6,107.7,110.8,103.9,107.2,113.4,104.9,109.1,116.0,112.0];
+
+const reclam = {
+  "Aucune réclamation":204,"Check-in tardif":97,"Ménage insuffisant":95,
+  "Bruit voisins":54,"Équipement défaillant":50
+};
+
+const attHoraire = {"14-16h":12.3,"17-18h":12.5,"19-20h":14.0,"21-23h":23.1};
+
+const npsLog = {"Appartement T2":6.38,"Appartement T3":6.36,"Studio":6.22,"Suite":6.36};
+
+// ── COLORS ──────────────────────────────────────────────────────────────────
+const colors = {
+  "Studio":"rgba(0,113,194,0.75)","Appartement T2":"rgba(0,166,81,0.75)",
+  "Appartement T3":"rgba(254,187,2,0.8)","Suite":"rgba(231,76,60,0.75)"
+};
+
+// ── 1. SCATTER ───────────────────────────────────────────────────────────────
+const scatterDatasets = {};
+scatter.forEach(d => {
+  if(!scatterDatasets[d.type_logement]) scatterDatasets[d.type_logement] = [];
+  scatterDatasets[d.type_logement].push({x: d.temps_attente_min, y: d.score_nps});
+});
+
+// Regression line
+const xs = scatter.map(d => d.temps_attente_min);
+const ys = scatter.map(d => d.score_nps);
+const n = xs.length;
+const sumX = xs.reduce((a,b)=>a+b,0), sumY = ys.reduce((a,b)=>a+b,0);
+const sumXY = xs.reduce((s,x,i)=>s+x*ys[i],0), sumX2 = xs.reduce((s,x)=>s+x*x,0);
+const slope = (n*sumXY - sumX*sumY)/(n*sumX2 - sumX*sumX);
+const intercept = (sumY - slope*sumX)/n;
+const xMin = 0, xMax = 90;
+const regLine = [{x:xMin, y:Math.max(1,slope*xMin+intercept)},{x:xMax, y:Math.min(10,slope*xMax+intercept)}];
+
+new Chart(document.getElementById('scatterChart'), {
+  data: {
+    datasets: [
+      ...Object.entries(scatterDatasets).map(([t,pts])=>({
+        type:'scatter', label:t, data:pts,
+        backgroundColor: colors[t], pointRadius:4, pointHoverRadius:6
+      })),
+      {
+        type:'line', label:'Tendance', data:regLine,
+        borderColor:'rgba(231,76,60,0.9)', borderWidth:2.5,
+        pointRadius:0, borderDash:[8,4], fill:false
+      }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{position:'bottom', labels:{boxWidth:12,font:{size:11}}},
+      tooltip:{ callbacks:{ label:(ctx)=>`${ctx.dataset.label}: attente ${ctx.parsed.x}min → NPS ${ctx.parsed.y}` }}
+    },
+    scales:{
+      x:{ title:{display:true,text:'Temps d\'attente (min)',font:{weight:'bold'}}, min:0, max:90 },
+      y:{ title:{display:true,text:'Score NPS',font:{weight:'bold'}}, min:1, max:10 }
+    }
+  }
+});
+
+// ── 2. RECLAMATIONS PIE ──────────────────────────────────────────────────────
+new Chart(document.getElementById('reclamChart'), {
+  type:'doughnut',
+  data:{
+    labels: Object.keys(reclam),
+    datasets:[{
+      data: Object.values(reclam),
+      backgroundColor:['#e2f0fb','#febb02','#ff8c00','#e74c3c','#9b59b6'],
+      borderWidth:2, borderColor:'#fff'
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false, cutout:'60%',
+    plugins:{
+      legend:{ position:'bottom', labels:{boxWidth:14,font:{size:11},padding:12} },
+      tooltip:{ callbacks:{ label:(ctx)=>`${ctx.label}: ${ctx.parsed} (${((ctx.parsed/500)*100).toFixed(1)}%)` }}
+    }
+  }
+});
+
+// ── 3. MONTHLY ───────────────────────────────────────────────────────────────
+new Chart(document.getElementById('monthChart'), {
+  data:{
+    labels: moisLabels,
+    datasets:[
+      { type:'bar', label:'Nb Réservations', data:nbRes, backgroundColor:'rgba(0,113,194,0.2)',
+        borderColor:'rgba(0,113,194,0.7)', borderWidth:2, yAxisID:'y1', order:2 },
+      { type:'line', label:'Coût Moyen (€)', data:coutMoyen,
+        borderColor:'#febb02', backgroundColor:'rgba(254,187,2,0.1)',
+        borderWidth:2.5, pointRadius:5, fill:true, yAxisID:'y2', tension:0.3, order:1 }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{position:'bottom',labels:{boxWidth:14,font:{size:11}}} },
+    scales:{
+      y1:{ position:'left', title:{display:true,text:'Réservations',font:{size:11}}, beginAtZero:true,
+           grid:{color:'rgba(0,0,0,0.05)'} },
+      y2:{ position:'right', title:{display:true,text:'Coût Moyen (€)',font:{size:11}},
+           min:95, max:125, grid:{display:false} }
+    }
+  }
+});
+
+// ── 4. HORAIRE BAR ───────────────────────────────────────────────────────────
+new Chart(document.getElementById('horaireChart'), {
+  type:'bar',
+  data:{
+    labels: Object.keys(attHoraire),
+    datasets:[{
+      label:'Temps d\'attente moyen (min)',
+      data: Object.values(attHoraire),
+      backgroundColor:['rgba(0,166,81,0.7)','rgba(0,166,81,0.7)','rgba(254,187,2,0.8)','rgba(231,76,60,0.8)'],
+      borderRadius:8, borderWidth:0
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false, indexAxis:'y',
+    plugins:{
+      legend:{display:false},
+      tooltip:{ callbacks:{ label:(ctx)=>`${ctx.parsed.x} min` }}
+    },
+    scales:{
+      x:{ title:{display:true,text:'Minutes',font:{weight:'bold'}}, beginAtZero:true, max:30 },
+      y:{ grid:{display:false} }
+    }
+  }
+});
+
+// ── 5. NPS par logement ──────────────────────────────────────────────────────
+new Chart(document.getElementById('npsLogChart'), {
+  type:'bar',
+  data:{
+    labels: Object.keys(npsLog),
+    datasets:[{
+      label:'NPS Moyen',
+      data: Object.values(npsLog),
+      backgroundColor:['rgba(0,113,194,0.75)','rgba(0,166,81,0.75)','rgba(254,187,2,0.8)','rgba(231,76,60,0.75)'],
+      borderRadius:8, borderWidth:0
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:(ctx)=>`NPS: ${ctx.parsed.y}/10`}}
+    },
+    scales:{
+      y:{min:5,max:7.5,title:{display:true,text:'Score NPS / 10',font:{weight:'bold'}}},
+      x:{grid:{display:false}}
+    }
+  }
+});
+
+// ── 6. COÛTS DÉCOMPOSÉS ──────────────────────────────────────────────────────
+const personnelMoys = [57,55,58,56,57,54,56,58,55,57,59,58];
+const maintenanceMoys = [27,25,28,26,27,25,26,29,25,27,31,29];
+const reclamMoys = [25,25,26,26,27,25,26,27,25,26,27,26];
+new Chart(document.getElementById('coutDecompChart'), {
+  type:'bar',
+  data:{
+    labels: moisLabels,
+    datasets:[
+      { label:'Personnel', data:personnelMoys, backgroundColor:'rgba(0,53,128,0.8)', stack:'s' },
+      { label:'Maintenance', data:maintenanceMoys, backgroundColor:'rgba(0,113,194,0.7)', stack:'s' },
+      { label:'Réclamations', data:reclamMoys, backgroundColor:'rgba(231,76,60,0.7)', stack:'s' }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{boxWidth:14,font:{size:11}}}},
+    scales:{
+      x:{grid:{display:false}},
+      y:{title:{display:true,text:'Coût moyen (€)',font:{weight:'bold'}},stacked:true}
+    }
+  }
+});
+
+// ── ECONOMY BAR ANIMATION ────────────────────────────────────────────────────
+setTimeout(()=>{
+  document.getElementById('ecoBar').style.width = '100%';
+  document.getElementById('pctLabel').textContent = '100% de l\'objectif calculé';
+}, 400);
+</script>
+</body>
+</html>

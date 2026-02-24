@@ -1,0 +1,501 @@
+﻿id_reservation,date_arrivee,mois,heure_arrivee,duree_sejour,type_logement,temps_attente_min,score_nps,motif_reclamation,cout_personnel,cout_maintenance,cout_reclamation,cout_total,haute_saison,tranche_horaire
+1,2023-05-17,5,16,4,Studio,14.1,7.2,Équipement défaillant,45.0,20.3,25,90.3,False,14-16h
+2,2023-12-13,12,16,3,Appartement T2,28.5,5.7,Check-in tardif,65.0,35.56,25,125.56,True,14-16h
+3,2023-09-24,9,20,2,Appartement T3,21.8,4.9,Ménage insuffisant,85.0,26.78,25,136.78,False,19-20h
+4,2023-08-06,8,16,5,Appartement T2,39.4,5.7,Check-in tardif,65.0,25.44,25,115.44,True,14-16h
+5,2023-02-26,2,16,4,Appartement T3,1.8,5.4,Check-in tardif,85.0,12.99,25,122.99,False,14-16h
+6,2023-02-26,2,18,2,Appartement T2,0.9,5.1,Check-in tardif,65.0,10.48,25,100.48,False,17-18h
+7,2023-01-22,1,17,7,Appartement T2,15.4,4.3,Équipement défaillant,65.0,53.91,25,143.91,False,17-18h
+8,2023-11-12,11,18,5,Appartement T3,4.6,3.7,Équipement défaillant,85.0,21.31,25,131.31,False,17-18h
+9,2023-08-07,8,15,10,Studio,30.1,6.4,Aucune réclamation,45.0,43.1,0,88.1,True,14-16h
+10,2023-09-15,9,17,4,Appartement T2,17.9,7.2,Aucune réclamation,65.0,12.39,0,77.39,False,17-18h
+11,2023-01-08,1,14,4,Studio,0.5,7.4,Aucune réclamation,45.0,30.49,0,75.49,False,14-16h
+12,2023-12-20,12,15,3,Suite,26.5,6.2,Aucune réclamation,120.0,37.98,0,157.98,True,14-16h
+13,2023-10-31,10,20,10,Suite,19.5,5.7,Aucune réclamation,120.0,42.27,0,162.27,False,19-20h
+14,2023-03-19,3,15,7,Studio,5.7,6.6,Ménage insuffisant,45.0,28.78,25,98.78,False,14-16h
+15,2023-03-08,3,17,1,Appartement T2,7.9,4.2,Bruit voisins,65.0,27.45,25,117.45,False,17-18h
+16,2023-03-08,3,17,1,Suite,20.9,6.5,Ménage insuffisant,120.0,32.99,25,177.99,False,17-18h
+17,2023-04-21,4,16,2,Studio,0.2,6.3,Aucune réclamation,45.0,22.19,0,67.19,False,14-16h
+18,2023-07-11,7,20,5,Appartement T2,23.9,5.9,Aucune réclamation,65.0,36.4,0,101.4,True,19-20h
+19,2023-06-07,6,14,14,Suite,15.3,3.8,Bruit voisins,120.0,44.46,25,189.46,True,14-16h
+20,2023-04-17,4,18,2,Studio,10.3,6.7,Aucune réclamation,45.0,36.98,0,81.98,False,17-18h
+21,2023-08-11,8,21,3,Appartement T2,24.5,6.4,Ménage insuffisant,65.0,28.71,25,118.71,True,21-23h
+22,2023-02-20,2,17,2,Studio,1.2,8.1,Aucune réclamation,45.0,13.94,0,58.94,False,17-18h
+23,2023-04-17,4,20,10,Suite,9.1,7.0,Check-in tardif,120.0,34.29,25,179.29,False,19-20h
+24,2023-05-14,5,15,5,Suite,3.6,6.5,Ménage insuffisant,120.0,16.05,25,161.05,False,14-16h
+25,2023-06-16,6,17,5,Suite,18.9,4.2,Check-in tardif,120.0,37.26,25,182.26,True,17-18h
+26,2023-10-13,10,16,3,Appartement T2,2.6,5.5,Bruit voisins,65.0,32.81,25,122.81,False,14-16h
+27,2023-03-14,3,18,3,Appartement T3,1.9,5.0,Bruit voisins,85.0,30.29,25,140.29,False,17-18h
+28,2023-07-07,7,22,2,Appartement T3,52.0,6.6,Check-in tardif,85.0,19.03,25,129.03,True,21-23h
+29,2023-08-04,8,16,1,Studio,15.1,5.6,Aucune réclamation,45.0,15.52,0,60.52,True,14-16h
+30,2023-01-17,1,18,7,Appartement T3,49.0,5.8,Équipement défaillant,85.0,47.69,25,157.69,False,17-18h
+31,2023-08-10,8,16,5,Studio,17.0,6.7,Check-in tardif,45.0,24.22,25,94.22,True,14-16h
+32,2023-03-04,3,17,14,Appartement T2,14.1,9.3,Aucune réclamation,65.0,31.77,0,96.77,False,17-18h
+33,2023-01-24,1,17,14,Studio,2.8,6.9,Aucune réclamation,45.0,43.5,0,88.5,False,17-18h
+34,2023-12-12,12,21,3,Studio,13.2,6.5,Bruit voisins,45.0,11.21,25,81.21,True,21-23h
+35,2023-12-18,12,18,5,Studio,19.9,8.3,Check-in tardif,45.0,19.79,25,89.79,True,17-18h
+36,2023-10-22,10,16,10,Appartement T2,14.4,4.8,Ménage insuffisant,65.0,39.06,25,129.06,False,14-16h
+37,2023-04-21,4,15,5,Studio,10.8,3.8,Bruit voisins,45.0,14.44,25,84.44,False,14-16h
+38,2023-02-05,2,16,2,Appartement T2,1.2,5.2,Aucune réclamation,65.0,39.54,0,104.54,False,14-16h
+39,2023-09-07,9,16,3,Studio,11.2,6.6,Bruit voisins,45.0,16.27,25,86.27,False,14-16h
+40,2023-06-10,6,16,1,Studio,24.5,3.0,Équipement défaillant,45.0,13.91,25,83.91,True,14-16h
+41,2023-02-14,2,19,10,Appartement T2,8.6,6.8,Aucune réclamation,65.0,31.11,0,96.11,False,19-20h
+42,2023-06-30,6,17,4,Appartement T3,31.2,5.6,Ménage insuffisant,85.0,33.07,25,143.07,True,17-18h
+43,2023-01-13,1,17,2,Studio,15.0,5.9,Équipement défaillant,45.0,22.77,25,92.77,False,17-18h
+44,2023-11-27,11,15,4,Appartement T2,7.6,6.3,Bruit voisins,65.0,26.96,25,116.96,False,14-16h
+45,2023-04-05,4,19,4,Appartement T3,0.7,7.7,Aucune réclamation,85.0,10.63,0,95.63,False,19-20h
+46,2023-08-30,8,18,2,Appartement T2,20.9,7.1,Check-in tardif,65.0,11.03,25,101.03,True,17-18h
+47,2023-04-24,4,15,1,Studio,0.6,6.3,Aucune réclamation,45.0,23.37,0,68.37,False,14-16h
+48,2023-07-09,7,18,4,Studio,14.4,4.7,Équipement défaillant,45.0,34.5,25,104.5,True,17-18h
+49,2023-07-19,7,17,3,Appartement T3,15.1,4.8,Ménage insuffisant,85.0,36.56,25,146.56,True,17-18h
+50,2023-03-09,3,15,5,Studio,0.5,8.5,Aucune réclamation,45.0,12.6,0,57.6,False,14-16h
+51,2023-12-19,12,17,3,Appartement T3,11.5,8.3,Aucune réclamation,85.0,26.15,0,111.15,True,17-18h
+52,2023-10-10,10,17,7,Appartement T2,0.9,8.0,Aucune réclamation,65.0,52.4,0,117.4,False,17-18h
+53,2023-12-08,12,16,3,Suite,22.2,8.5,Aucune réclamation,120.0,21.64,0,141.64,True,14-16h
+54,2023-11-22,11,21,3,Appartement T3,32.7,5.4,Aucune réclamation,85.0,34.89,0,119.89,False,21-23h
+55,2023-08-06,8,19,7,Suite,15.5,7.5,Bruit voisins,120.0,29.01,25,174.01,True,19-20h
+56,2023-12-02,12,18,3,Appartement T2,44.4,6.9,Bruit voisins,65.0,38.06,25,128.06,True,17-18h
+57,2023-02-02,2,17,1,Appartement T3,5.9,8.2,Aucune réclamation,85.0,32.54,0,117.54,False,17-18h
+58,2023-03-13,3,17,1,Appartement T2,2.8,8.1,Check-in tardif,65.0,38.24,25,128.24,False,17-18h
+59,2023-01-17,1,18,5,Appartement T2,0.6,5.5,Aucune réclamation,65.0,30.3,0,95.3,False,17-18h
+60,2023-04-29,4,17,4,Appartement T2,5.6,6.8,Aucune réclamation,65.0,20.9,0,85.9,False,17-18h
+61,2023-05-22,5,15,4,Appartement T3,12.7,4.8,Check-in tardif,85.0,38.15,25,148.15,False,14-16h
+62,2023-04-09,4,17,2,Suite,9.8,6.5,Bruit voisins,120.0,18.27,25,163.27,False,17-18h
+63,2023-10-29,10,19,1,Appartement T3,0.4,6.2,Aucune réclamation,85.0,19.97,0,104.97,False,19-20h
+64,2023-05-10,5,17,1,Appartement T2,0.6,6.9,Bruit voisins,65.0,31.02,25,121.02,False,17-18h
+65,2023-04-13,4,15,2,Appartement T2,4.1,9.1,Aucune réclamation,65.0,32.96,0,97.96,False,14-16h
+66,2023-07-17,7,19,3,Appartement T2,11.8,6.5,Check-in tardif,65.0,37.88,25,127.88,True,19-20h
+67,2023-02-21,2,16,2,Studio,2.1,7.8,Aucune réclamation,45.0,16.14,0,61.14,False,14-16h
+68,2023-10-19,10,16,3,Studio,2.6,4.7,Ménage insuffisant,45.0,33.94,25,103.94,False,14-16h
+69,2023-01-28,1,16,7,Appartement T2,13.0,6.2,Aucune réclamation,65.0,47.16,0,112.16,False,14-16h
+70,2023-12-26,12,16,2,Studio,36.3,6.6,Check-in tardif,45.0,11.91,25,81.91,True,14-16h
+71,2023-10-09,10,18,3,Studio,4.2,6.9,Équipement défaillant,45.0,21.62,25,91.62,False,17-18h
+72,2023-03-14,3,17,5,Studio,18.9,5.3,Ménage insuffisant,45.0,18.48,25,88.48,False,17-18h
+73,2023-01-03,1,16,2,Studio,3.1,6.9,Aucune réclamation,45.0,19.13,0,64.13,False,14-16h
+74,2023-10-24,10,19,4,Studio,5.2,5.0,Aucune réclamation,45.0,39.49,0,84.49,False,19-20h
+75,2023-09-15,9,19,7,Suite,2.0,4.7,Bruit voisins,120.0,44.28,25,189.28,False,19-20h
+76,2023-09-23,9,19,10,Appartement T2,8.2,8.1,Ménage insuffisant,65.0,46.53,25,136.53,False,19-20h
+77,2023-10-08,10,16,1,Appartement T2,30.9,3.7,Ménage insuffisant,65.0,39.3,25,129.3,False,14-16h
+78,2023-01-27,1,17,7,Appartement T2,7.4,7.6,Aucune réclamation,65.0,36.32,0,101.32,False,17-18h
+79,2023-05-11,5,22,3,Studio,15.4,8.3,Aucune réclamation,45.0,34.06,0,79.06,False,21-23h
+80,2023-02-12,2,18,2,Suite,8.3,4.3,Équipement défaillant,120.0,23.04,25,168.04,False,17-18h
+81,2023-11-11,11,14,3,Appartement T3,1.0,6.2,Bruit voisins,85.0,36.09,25,146.09,False,14-16h
+82,2023-08-15,8,15,14,Studio,35.8,6.1,Check-in tardif,45.0,30.42,25,100.42,True,14-16h
+83,2023-05-01,5,17,3,Appartement T2,5.6,5.9,Équipement défaillant,65.0,38.43,25,128.43,False,17-18h
+84,2023-01-24,1,20,2,Appartement T3,18.1,9.0,Check-in tardif,85.0,16.56,25,126.56,False,19-20h
+85,2023-04-24,4,17,4,Suite,7.1,5.3,Aucune réclamation,120.0,19.79,0,139.79,False,17-18h
+86,2023-04-29,4,17,2,Appartement T2,7.8,7.0,Ménage insuffisant,65.0,32.69,25,122.69,False,17-18h
+87,2023-09-23,9,15,1,Appartement T2,0.6,7.3,Aucune réclamation,65.0,21.81,0,86.81,False,14-16h
+88,2023-08-21,8,18,1,Studio,14.4,6.6,Check-in tardif,45.0,28.25,25,98.25,True,17-18h
+89,2023-11-19,11,19,1,Suite,2.2,6.5,Check-in tardif,120.0,23.34,25,168.34,False,19-20h
+90,2023-06-21,6,17,2,Studio,18.8,6.0,Aucune réclamation,45.0,32.27,0,77.27,True,17-18h
+91,2023-02-13,2,18,1,Suite,13.8,7.4,Aucune réclamation,120.0,16.85,0,136.85,False,17-18h
+92,2023-09-17,9,21,4,Appartement T2,18.1,4.7,Aucune réclamation,65.0,11.75,0,76.75,False,21-23h
+93,2023-10-04,10,16,2,Appartement T2,6.4,6.6,Ménage insuffisant,65.0,19.0,25,109.0,False,14-16h
+94,2023-07-24,7,17,2,Appartement T2,23.5,5.9,Ménage insuffisant,65.0,24.23,25,114.23,True,17-18h
+95,2023-10-08,10,16,7,Studio,1.2,8.2,Aucune réclamation,45.0,30.04,0,75.04,False,14-16h
+96,2023-06-29,6,19,3,Studio,27.0,6.6,Équipement défaillant,45.0,20.64,25,90.64,True,19-20h
+97,2023-07-10,7,17,4,Studio,22.2,6.0,Bruit voisins,45.0,22.0,25,92.0,True,17-18h
+98,2023-06-05,6,18,2,Studio,12.0,6.0,Ménage insuffisant,45.0,11.72,25,81.72,True,17-18h
+99,2023-01-10,1,19,2,Appartement T3,2.7,4.9,Ménage insuffisant,85.0,27.5,25,137.5,False,19-20h
+100,2023-02-09,2,17,1,Appartement T2,1.1,6.6,Aucune réclamation,65.0,36.53,0,101.53,False,17-18h
+101,2023-01-12,1,20,2,Studio,12.6,7.1,Bruit voisins,45.0,14.55,25,84.55,False,19-20h
+102,2023-08-20,8,17,2,Suite,16.7,7.4,Check-in tardif,120.0,27.93,25,172.93,True,17-18h
+103,2023-04-25,4,16,2,Appartement T3,11.0,5.5,Bruit voisins,85.0,29.94,25,139.94,False,14-16h
+104,2023-07-05,7,18,1,Suite,14.6,5.8,Check-in tardif,120.0,22.58,25,167.58,True,17-18h
+105,2023-11-27,11,19,1,Suite,0.0,4.9,Ménage insuffisant,120.0,31.03,25,176.03,False,19-20h
+106,2023-04-01,4,16,3,Studio,5.7,7.2,Équipement défaillant,45.0,22.32,25,92.32,False,14-16h
+107,2023-05-30,5,19,2,Appartement T2,0.4,6.8,Ménage insuffisant,65.0,25.14,25,115.14,False,19-20h
+108,2023-10-03,10,20,2,Appartement T3,9.0,9.7,Aucune réclamation,85.0,10.22,0,95.22,False,19-20h
+109,2023-03-25,3,16,3,Appartement T2,9.8,4.7,Bruit voisins,65.0,30.75,25,120.75,False,14-16h
+110,2023-01-29,1,22,4,Studio,15.2,5.2,Équipement défaillant,45.0,29.84,25,99.84,False,21-23h
+111,2023-04-16,4,15,1,Appartement T3,14.6,7.4,Aucune réclamation,85.0,11.15,0,96.15,False,14-16h
+112,2023-02-28,2,16,5,Studio,0.0,8.3,Aucune réclamation,45.0,21.05,0,66.05,False,14-16h
+113,2023-12-05,12,16,4,Studio,18.0,5.2,Équipement défaillant,45.0,39.37,25,109.37,True,14-16h
+114,2023-10-22,10,20,1,Appartement T2,23.4,4.5,Check-in tardif,65.0,22.62,25,112.62,False,19-20h
+115,2023-08-19,8,18,7,Appartement T2,11.0,6.9,Check-in tardif,65.0,40.06,25,130.06,True,17-18h
+116,2023-11-14,11,16,7,Appartement T2,0.9,8.3,Aucune réclamation,65.0,52.3,0,117.3,False,14-16h
+117,2023-10-20,10,17,1,Studio,3.6,6.3,Aucune réclamation,45.0,31.52,0,76.52,False,17-18h
+118,2023-03-09,3,18,2,Appartement T3,2.5,9.1,Aucune réclamation,85.0,27.46,0,112.46,False,17-18h
+119,2023-11-21,11,15,5,Studio,14.8,7.1,Équipement défaillant,45.0,33.93,25,103.93,False,14-16h
+120,2023-07-16,7,20,4,Studio,16.3,7.4,Aucune réclamation,45.0,35.93,0,80.93,True,19-20h
+121,2023-10-21,10,19,2,Appartement T3,12.4,5.8,Check-in tardif,85.0,23.71,25,133.71,False,19-20h
+122,2023-11-23,11,17,2,Suite,17.8,6.1,Ménage insuffisant,120.0,24.25,25,169.25,False,17-18h
+123,2023-04-26,4,21,2,Appartement T3,10.2,4.7,Équipement défaillant,85.0,21.58,25,131.58,False,21-23h
+124,2023-02-10,2,17,3,Appartement T3,19.3,7.1,Aucune réclamation,85.0,39.0,0,124.0,False,17-18h
+125,2023-03-24,3,22,4,Appartement T2,9.8,3.1,Ménage insuffisant,65.0,30.91,25,120.91,False,21-23h
+126,2023-06-05,6,18,2,Appartement T2,40.7,7.5,Aucune réclamation,65.0,12.5,0,77.5,True,17-18h
+127,2023-10-25,10,18,3,Studio,0.7,4.1,Bruit voisins,45.0,35.89,25,105.89,False,17-18h
+128,2023-11-10,11,16,4,Appartement T2,9.3,7.5,Équipement défaillant,65.0,24.42,25,114.42,False,14-16h
+129,2023-01-03,1,20,1,Appartement T2,18.0,5.3,Ménage insuffisant,65.0,12.06,25,102.06,False,19-20h
+130,2023-07-05,7,17,2,Studio,21.5,5.1,Check-in tardif,45.0,26.49,25,96.49,True,17-18h
+131,2023-06-01,6,16,4,Appartement T2,25.1,6.1,Aucune réclamation,65.0,22.51,0,87.51,True,14-16h
+132,2023-03-22,3,14,7,Appartement T2,9.7,5.3,Check-in tardif,65.0,51.33,25,141.33,False,14-16h
+133,2023-02-13,2,17,3,Studio,0.0,9.2,Aucune réclamation,45.0,16.12,0,61.12,False,17-18h
+134,2023-05-03,5,17,3,Studio,1.5,4.5,Aucune réclamation,45.0,34.79,0,79.79,False,17-18h
+135,2023-12-10,12,18,1,Appartement T2,18.0,8.5,Aucune réclamation,65.0,26.73,0,91.73,True,17-18h
+136,2023-04-28,4,20,3,Studio,17.6,6.0,Bruit voisins,45.0,11.64,25,81.64,False,19-20h
+137,2023-07-08,7,15,3,Appartement T3,43.2,3.4,Check-in tardif,85.0,39.16,25,149.16,True,14-16h
+138,2023-09-13,9,18,2,Appartement T2,11.5,4.3,Ménage insuffisant,65.0,25.38,25,115.38,False,17-18h
+139,2023-05-13,5,16,2,Appartement T2,24.1,8.8,Aucune réclamation,65.0,18.73,0,83.73,False,14-16h
+140,2023-12-20,12,19,2,Appartement T2,15.7,6.1,Aucune réclamation,65.0,24.08,0,89.08,True,19-20h
+141,2023-12-17,12,19,1,Appartement T3,13.4,4.2,Équipement défaillant,85.0,35.74,25,145.74,True,19-20h
+142,2023-04-02,4,17,2,Studio,0.9,8.8,Aucune réclamation,45.0,19.15,0,64.15,False,17-18h
+143,2023-06-30,6,18,2,Appartement T2,25.9,6.0,Équipement défaillant,65.0,15.78,25,105.78,True,17-18h
+144,2023-04-20,4,16,2,Appartement T2,8.3,6.2,Aucune réclamation,65.0,13.87,0,78.87,False,14-16h
+145,2023-04-14,4,17,1,Studio,0.4,6.3,Ménage insuffisant,45.0,18.94,25,88.94,False,17-18h
+146,2023-01-14,1,19,7,Appartement T3,3.6,6.2,Aucune réclamation,85.0,48.4,0,133.4,False,19-20h
+147,2023-08-10,8,17,3,Appartement T3,43.6,6.3,Ménage insuffisant,85.0,24.15,25,134.15,True,17-18h
+148,2023-07-02,7,17,4,Appartement T2,20.5,8.1,Aucune réclamation,65.0,16.82,0,81.82,True,17-18h
+149,2023-01-19,1,17,5,Appartement T3,4.5,8.1,Aucune réclamation,85.0,14.99,0,99.99,False,17-18h
+150,2023-04-12,4,19,3,Appartement T3,4.9,7.8,Aucune réclamation,85.0,19.98,0,104.98,False,19-20h
+151,2023-11-27,11,16,1,Appartement T2,1.9,8.1,Ménage insuffisant,65.0,38.2,25,128.2,False,14-16h
+152,2023-03-29,3,16,3,Appartement T3,3.7,5.9,Check-in tardif,85.0,20.29,25,130.29,False,14-16h
+153,2023-02-22,2,18,3,Appartement T2,3.7,4.5,Bruit voisins,65.0,39.64,25,129.64,False,17-18h
+154,2023-06-28,6,19,4,Appartement T2,11.8,6.3,Check-in tardif,65.0,24.56,25,114.56,True,19-20h
+155,2023-12-25,12,15,3,Appartement T2,23.3,7.9,Ménage insuffisant,65.0,15.37,25,105.37,True,14-16h
+156,2023-03-30,3,16,1,Appartement T3,4.3,6.2,Aucune réclamation,85.0,36.73,0,121.73,False,14-16h
+157,2023-09-02,9,15,2,Studio,13.8,5.2,Équipement défaillant,45.0,23.81,25,93.81,False,14-16h
+158,2023-10-05,10,16,2,Appartement T3,15.2,6.2,Check-in tardif,85.0,31.29,25,141.29,False,14-16h
+159,2023-03-28,3,17,4,Appartement T3,1.9,5.9,Check-in tardif,85.0,39.51,25,149.51,False,17-18h
+160,2023-09-23,9,18,3,Studio,8.6,4.5,Check-in tardif,45.0,11.51,25,81.51,False,17-18h
+161,2023-05-14,5,18,2,Appartement T3,5.1,8.7,Aucune réclamation,85.0,12.9,0,97.9,False,17-18h
+162,2023-08-19,8,18,14,Studio,22.3,8.3,Équipement défaillant,45.0,46.61,25,116.61,True,17-18h
+163,2023-08-19,8,17,4,Studio,11.5,7.5,Aucune réclamation,45.0,18.45,0,63.45,True,17-18h
+164,2023-07-15,7,19,2,Appartement T2,21.6,4.2,Check-in tardif,65.0,15.53,25,105.53,True,19-20h
+165,2023-02-02,2,17,1,Studio,7.5,5.5,Aucune réclamation,45.0,11.18,0,56.18,False,17-18h
+166,2023-11-01,11,21,2,Appartement T3,11.1,7.6,Aucune réclamation,85.0,10.66,0,95.66,False,21-23h
+167,2023-04-27,4,18,2,Appartement T3,1.2,7.3,Bruit voisins,85.0,33.23,25,143.23,False,17-18h
+168,2023-03-09,3,15,2,Appartement T2,8.4,7.9,Aucune réclamation,65.0,14.03,0,79.03,False,14-16h
+169,2023-01-15,1,18,2,Studio,10.7,5.8,Ménage insuffisant,45.0,24.03,25,94.03,False,17-18h
+170,2023-08-04,8,16,2,Studio,14.2,6.4,Aucune réclamation,45.0,28.18,0,73.18,True,14-16h
+171,2023-09-04,9,18,2,Appartement T2,8.3,4.5,Check-in tardif,65.0,22.85,25,112.85,False,17-18h
+172,2023-01-07,1,15,7,Suite,4.0,8.4,Aucune réclamation,120.0,25.81,0,145.81,False,14-16h
+173,2023-07-06,7,16,1,Appartement T2,17.4,8.3,Aucune réclamation,65.0,33.51,0,98.51,True,14-16h
+174,2023-03-24,3,19,3,Studio,1.8,5.6,Aucune réclamation,45.0,10.32,0,55.32,False,19-20h
+175,2023-08-23,8,16,3,Appartement T2,23.7,8.7,Aucune réclamation,65.0,32.86,0,97.86,True,14-16h
+176,2023-03-05,3,19,14,Appartement T2,2.7,6.6,Check-in tardif,65.0,51.8,25,141.8,False,19-20h
+177,2023-09-09,9,16,1,Appartement T3,3.7,7.6,Ménage insuffisant,85.0,22.99,25,132.99,False,14-16h
+178,2023-05-21,5,18,2,Studio,0.5,4.4,Check-in tardif,45.0,26.07,25,96.07,False,17-18h
+179,2023-12-07,12,18,10,Appartement T3,18.2,4.0,Ménage insuffisant,85.0,39.31,25,149.31,True,17-18h
+180,2023-02-20,2,17,7,Appartement T2,5.8,7.1,Aucune réclamation,65.0,36.68,0,101.68,False,17-18h
+181,2023-05-05,5,16,5,Suite,2.5,6.6,Check-in tardif,120.0,36.62,25,181.62,False,14-16h
+182,2023-02-11,2,16,2,Studio,14.4,9.2,Aucune réclamation,45.0,36.82,0,81.82,False,14-16h
+183,2023-12-03,12,14,2,Appartement T2,9.8,8.2,Aucune réclamation,65.0,20.07,0,85.07,True,14-16h
+184,2023-11-16,11,16,4,Suite,3.8,7.1,Aucune réclamation,120.0,28.45,0,148.45,False,14-16h
+185,2023-04-04,4,18,7,Studio,3.3,4.7,Ménage insuffisant,45.0,52.81,25,122.81,False,17-18h
+186,2023-08-29,8,20,3,Suite,23.0,8.4,Aucune réclamation,120.0,38.86,0,158.86,True,19-20h
+187,2023-10-25,10,19,3,Appartement T2,1.1,6.3,Aucune réclamation,65.0,25.27,0,90.27,False,19-20h
+188,2023-07-22,7,18,2,Studio,14.6,7.5,Check-in tardif,45.0,23.58,25,93.58,True,17-18h
+189,2023-07-12,7,19,5,Studio,22.9,6.4,Aucune réclamation,45.0,18.36,0,63.36,True,19-20h
+190,2023-03-30,3,18,2,Appartement T2,4.1,9.3,Aucune réclamation,65.0,38.77,0,103.77,False,17-18h
+191,2023-02-03,2,16,2,Studio,6.1,6.6,Ménage insuffisant,45.0,14.28,25,84.28,False,14-16h
+192,2023-11-23,11,20,3,Appartement T2,16.5,5.5,Équipement défaillant,65.0,27.39,25,117.39,False,19-20h
+193,2023-11-24,11,18,3,Studio,0.1,5.4,Check-in tardif,45.0,18.48,25,88.48,False,17-18h
+194,2023-08-19,8,17,2,Appartement T2,14.9,5.3,Ménage insuffisant,65.0,18.37,25,108.37,True,17-18h
+195,2023-05-04,5,15,1,Studio,26.5,5.9,Check-in tardif,45.0,22.15,25,92.15,False,14-16h
+196,2023-05-08,5,17,4,Appartement T3,5.9,6.0,Ménage insuffisant,85.0,39.96,25,149.96,False,17-18h
+197,2023-09-22,9,17,2,Suite,9.1,5.1,Ménage insuffisant,120.0,11.65,25,156.65,False,17-18h
+198,2023-11-23,11,19,3,Suite,3.0,5.7,Ménage insuffisant,120.0,27.36,25,172.36,False,19-20h
+199,2023-11-19,11,17,2,Appartement T2,11.9,7.3,Aucune réclamation,65.0,12.48,0,77.48,False,17-18h
+200,2023-10-11,10,17,3,Studio,11.9,3.2,Équipement défaillant,45.0,14.64,25,84.64,False,17-18h
+201,2023-08-22,8,21,3,Appartement T3,29.5,7.4,Aucune réclamation,85.0,23.19,0,108.19,True,21-23h
+202,2023-01-31,1,15,1,Studio,29.8,4.1,Check-in tardif,45.0,25.31,25,95.31,False,14-16h
+203,2023-02-28,2,17,2,Studio,1.1,4.6,Check-in tardif,45.0,17.76,25,87.76,False,17-18h
+204,2023-11-24,11,14,1,Studio,0.1,4.0,Équipement défaillant,45.0,19.49,25,89.49,False,14-16h
+205,2023-08-09,8,18,1,Appartement T2,26.9,3.1,Check-in tardif,65.0,12.61,25,102.61,True,17-18h
+206,2023-01-04,1,20,14,Appartement T3,26.8,3.9,Ménage insuffisant,85.0,34.1,25,144.1,False,19-20h
+207,2023-02-06,2,16,2,Appartement T2,1.0,6.6,Aucune réclamation,65.0,39.0,0,104.0,False,14-16h
+208,2023-08-30,8,19,5,Appartement T2,18.7,8.0,Bruit voisins,65.0,38.34,25,128.34,True,19-20h
+209,2023-01-02,1,16,2,Studio,0.1,6.9,Aucune réclamation,45.0,20.05,0,65.05,False,14-16h
+210,2023-02-28,2,20,4,Suite,17.3,7.3,Aucune réclamation,120.0,27.13,0,147.13,False,19-20h
+211,2023-07-19,7,18,5,Appartement T2,19.3,6.1,Ménage insuffisant,65.0,37.29,25,127.29,True,17-18h
+212,2023-09-09,9,19,3,Appartement T2,5.8,6.0,Ménage insuffisant,65.0,10.19,25,100.19,False,19-20h
+213,2023-08-26,8,14,3,Studio,11.1,7.0,Aucune réclamation,45.0,34.32,0,79.32,True,14-16h
+214,2023-03-23,3,21,3,Appartement T3,14.2,4.1,Check-in tardif,85.0,38.45,25,148.45,False,21-23h
+215,2023-09-17,9,18,2,Appartement T2,0.0,7.7,Ménage insuffisant,65.0,12.74,25,102.74,False,17-18h
+216,2023-03-28,3,16,7,Studio,2.9,9.6,Aucune réclamation,45.0,29.84,0,74.84,False,14-16h
+217,2023-04-29,4,19,5,Studio,8.3,3.8,Ménage insuffisant,45.0,38.82,25,108.82,False,19-20h
+218,2023-09-29,9,16,10,Appartement T2,29.3,5.6,Aucune réclamation,65.0,41.13,0,106.13,False,14-16h
+219,2023-08-25,8,19,1,Appartement T2,30.8,6.2,Aucune réclamation,65.0,10.43,0,75.43,True,19-20h
+220,2023-11-06,11,15,4,Studio,0.2,4.8,Bruit voisins,45.0,17.73,25,87.73,False,14-16h
+221,2023-08-28,8,18,10,Suite,31.0,5.7,Ménage insuffisant,120.0,38.5,25,183.5,True,17-18h
+222,2023-07-26,7,17,2,Studio,19.7,4.8,Ménage insuffisant,45.0,30.79,25,100.79,True,17-18h
+223,2023-02-04,2,15,1,Appartement T2,12.1,8.2,Check-in tardif,65.0,31.99,25,121.99,False,14-16h
+224,2023-05-14,5,16,4,Suite,4.9,7.3,Ménage insuffisant,120.0,39.86,25,184.86,False,14-16h
+225,2023-04-07,4,14,3,Appartement T2,4.1,7.6,Aucune réclamation,65.0,18.63,0,83.63,False,14-16h
+226,2023-03-30,3,17,5,Appartement T2,2.9,7.2,Ménage insuffisant,65.0,26.15,25,116.15,False,17-18h
+227,2023-12-21,12,16,1,Appartement T2,9.2,7.1,Équipement défaillant,65.0,26.0,25,116.0,True,14-16h
+228,2023-05-24,5,17,5,Studio,2.1,6.8,Aucune réclamation,45.0,22.17,0,67.17,False,17-18h
+229,2023-11-21,11,16,2,Suite,2.3,6.5,Aucune réclamation,120.0,15.07,0,135.07,False,14-16h
+230,2023-08-18,8,16,2,Appartement T2,13.6,7.2,Aucune réclamation,65.0,39.32,0,104.32,True,14-16h
+231,2023-10-17,10,18,2,Appartement T3,11.0,6.7,Check-in tardif,85.0,35.6,25,145.6,False,17-18h
+232,2023-07-02,7,14,5,Studio,19.3,7.1,Aucune réclamation,45.0,24.95,0,69.95,True,14-16h
+233,2023-07-29,7,20,4,Studio,17.5,3.6,Équipement défaillant,45.0,28.1,25,98.1,True,19-20h
+234,2023-06-29,6,19,3,Studio,31.2,4.1,Check-in tardif,45.0,16.82,25,86.82,True,19-20h
+235,2023-03-13,3,18,2,Appartement T2,22.9,5.5,Ménage insuffisant,65.0,26.31,25,116.31,False,17-18h
+236,2023-09-20,9,17,7,Appartement T2,12.3,7.1,Aucune réclamation,65.0,45.85,0,110.85,False,17-18h
+237,2023-04-13,4,20,2,Appartement T3,48.9,7.3,Check-in tardif,85.0,25.46,25,135.46,False,19-20h
+238,2023-01-09,1,16,5,Appartement T2,6.3,4.2,Bruit voisins,65.0,39.71,25,129.71,False,14-16h
+239,2023-08-23,8,15,3,Suite,40.6,5.7,Check-in tardif,120.0,28.34,25,173.34,True,14-16h
+240,2023-03-06,3,16,2,Studio,0.6,7.8,Check-in tardif,45.0,21.13,25,91.13,False,14-16h
+241,2023-12-09,12,19,3,Appartement T3,14.9,9.8,Aucune réclamation,85.0,33.16,0,118.16,True,19-20h
+242,2023-12-14,12,14,2,Appartement T3,13.5,6.6,Aucune réclamation,85.0,15.11,0,100.11,True,14-16h
+243,2023-11-30,11,17,4,Appartement T3,1.7,8.1,Aucune réclamation,85.0,21.54,0,106.54,False,17-18h
+244,2023-05-15,5,22,3,Appartement T3,4.9,6.6,Ménage insuffisant,85.0,20.41,25,130.41,False,21-23h
+245,2023-01-06,1,19,2,Appartement T3,7.8,6.1,Check-in tardif,85.0,22.95,25,132.95,False,19-20h
+246,2023-12-04,12,17,7,Appartement T2,19.7,5.5,Check-in tardif,65.0,48.45,25,138.45,True,17-18h
+247,2023-06-05,6,15,2,Studio,19.4,6.1,Ménage insuffisant,45.0,24.53,25,94.53,True,14-16h
+248,2023-12-18,12,19,3,Studio,12.5,2.6,Bruit voisins,45.0,33.82,25,103.82,True,19-20h
+249,2023-12-17,12,17,7,Suite,31.4,7.5,Aucune réclamation,120.0,42.29,0,162.29,True,17-18h
+250,2023-11-07,11,15,4,Appartement T2,8.1,5.9,Ménage insuffisant,65.0,20.26,25,110.26,False,14-16h
+251,2023-04-18,4,15,1,Appartement T3,3.9,5.6,Équipement défaillant,85.0,34.3,25,144.3,False,14-16h
+252,2023-05-21,5,20,10,Appartement T2,22.9,7.8,Bruit voisins,65.0,32.15,25,122.15,False,19-20h
+253,2023-11-06,11,18,4,Studio,2.4,5.1,Ménage insuffisant,45.0,16.73,25,86.73,False,17-18h
+254,2023-04-26,4,19,2,Studio,3.4,5.4,Bruit voisins,45.0,25.14,25,95.14,False,19-20h
+255,2023-03-03,3,19,1,Appartement T2,20.0,9.3,Aucune réclamation,65.0,17.83,0,82.83,False,19-20h
+256,2023-07-22,7,17,5,Appartement T2,9.9,6.3,Aucune réclamation,65.0,10.27,0,75.27,True,17-18h
+257,2023-12-07,12,17,4,Studio,20.5,6.5,Aucune réclamation,45.0,29.45,0,74.45,True,17-18h
+258,2023-09-11,9,17,3,Appartement T2,17.7,5.3,Check-in tardif,65.0,25.33,25,115.33,False,17-18h
+259,2023-07-27,7,16,7,Studio,20.7,6.5,Ménage insuffisant,45.0,38.37,25,108.37,True,14-16h
+260,2023-02-05,2,17,5,Appartement T2,0.5,6.2,Équipement défaillant,65.0,39.01,25,129.01,False,17-18h
+261,2023-08-12,8,18,2,Studio,9.3,4.3,Check-in tardif,45.0,27.14,25,97.14,True,17-18h
+262,2023-12-27,12,18,2,Appartement T3,12.7,6.5,Aucune réclamation,85.0,35.9,0,120.9,True,17-18h
+263,2023-02-20,2,20,2,Studio,17.4,4.9,Ménage insuffisant,45.0,14.18,25,84.18,False,19-20h
+264,2023-07-08,7,17,4,Appartement T2,10.0,5.7,Check-in tardif,65.0,27.08,25,117.08,True,17-18h
+265,2023-11-16,11,18,1,Studio,1.2,6.5,Ménage insuffisant,45.0,36.04,25,106.04,False,17-18h
+266,2023-09-27,9,18,3,Studio,25.3,6.0,Check-in tardif,45.0,27.49,25,97.49,False,17-18h
+267,2023-09-11,9,17,5,Appartement T2,6.0,5.2,Aucune réclamation,65.0,31.54,0,96.54,False,17-18h
+268,2023-09-13,9,18,7,Appartement T2,2.2,7.2,Check-in tardif,65.0,36.16,25,126.16,False,17-18h
+269,2023-05-11,5,16,2,Appartement T2,5.6,6.2,Check-in tardif,65.0,12.77,25,102.77,False,14-16h
+270,2023-04-17,4,17,5,Studio,9.1,7.5,Check-in tardif,45.0,23.74,25,93.74,False,17-18h
+271,2023-10-22,10,15,1,Appartement T2,0.6,6.5,Check-in tardif,65.0,21.83,25,111.83,False,14-16h
+272,2023-10-22,10,17,5,Appartement T3,2.6,8.7,Aucune réclamation,85.0,36.01,0,121.01,False,17-18h
+273,2023-11-12,11,17,1,Appartement T3,13.2,7.8,Aucune réclamation,85.0,17.32,0,102.32,False,17-18h
+274,2023-11-29,11,18,2,Studio,4.9,9.0,Aucune réclamation,45.0,39.0,0,84.0,False,17-18h
+275,2023-07-06,7,21,5,Appartement T2,34.8,7.5,Aucune réclamation,65.0,38.74,0,103.74,True,21-23h
+276,2023-07-02,7,18,1,Studio,21.9,5.4,Check-in tardif,45.0,17.43,25,87.43,True,17-18h
+277,2023-10-18,10,18,2,Studio,0.4,10.0,Aucune réclamation,45.0,20.44,0,65.44,False,17-18h
+278,2023-08-25,8,17,4,Suite,13.7,6.8,Check-in tardif,120.0,36.87,25,181.87,True,17-18h
+279,2023-09-13,9,18,4,Studio,4.7,6.5,Bruit voisins,45.0,39.0,25,109.0,False,17-18h
+280,2023-10-17,10,15,4,Appartement T2,1.9,5.9,Aucune réclamation,65.0,23.3,0,88.3,False,14-16h
+281,2023-11-20,11,16,4,Appartement T2,0.4,4.4,Ménage insuffisant,65.0,19.63,25,109.63,False,14-16h
+282,2023-05-04,5,17,3,Appartement T2,14.8,7.5,Aucune réclamation,65.0,25.78,0,90.78,False,17-18h
+283,2023-05-17,5,17,2,Appartement T2,31.8,5.2,Check-in tardif,65.0,30.63,25,120.63,False,17-18h
+284,2023-02-04,2,14,2,Studio,12.6,6.4,Aucune réclamation,45.0,18.2,0,63.2,False,14-16h
+285,2023-07-30,7,15,2,Studio,27.4,7.0,Aucune réclamation,45.0,32.09,0,77.09,True,14-16h
+286,2023-01-14,1,16,7,Appartement T2,2.2,9.4,Aucune réclamation,65.0,26.55,0,91.55,False,14-16h
+287,2023-06-19,6,21,3,Studio,46.6,7.4,Aucune réclamation,45.0,11.48,0,56.48,True,21-23h
+288,2023-07-17,7,16,3,Appartement T2,18.8,5.5,Aucune réclamation,65.0,21.59,0,86.59,True,14-16h
+289,2023-04-15,4,17,3,Studio,24.2,5.3,Ménage insuffisant,45.0,20.6,25,90.6,False,17-18h
+290,2023-08-04,8,16,10,Studio,50.2,3.9,Équipement défaillant,45.0,34.47,25,104.47,True,14-16h
+291,2023-01-12,1,18,2,Appartement T2,10.0,5.2,Ménage insuffisant,65.0,24.73,25,114.73,False,17-18h
+292,2023-01-14,1,16,3,Studio,31.8,6.3,Aucune réclamation,45.0,19.62,0,64.62,False,14-16h
+293,2023-10-27,10,16,3,Appartement T2,6.7,5.2,Équipement défaillant,65.0,15.77,25,105.77,False,14-16h
+294,2023-05-12,5,17,4,Appartement T2,2.4,5.9,Aucune réclamation,65.0,19.28,0,84.28,False,17-18h
+295,2023-02-16,2,14,1,Appartement T3,4.6,5.7,Ménage insuffisant,85.0,39.25,25,149.25,False,14-16h
+296,2023-07-10,7,14,7,Studio,13.2,4.9,Ménage insuffisant,45.0,37.33,25,107.33,True,14-16h
+297,2023-10-08,10,16,10,Studio,0.6,4.0,Aucune réclamation,45.0,38.34,0,83.34,False,14-16h
+298,2023-03-20,3,14,3,Studio,7.8,8.3,Ménage insuffisant,45.0,27.3,25,97.3,False,14-16h
+299,2023-08-15,8,15,4,Appartement T2,42.4,6.3,Ménage insuffisant,65.0,39.5,25,129.5,True,14-16h
+300,2023-02-01,2,16,7,Appartement T2,1.7,5.5,Ménage insuffisant,65.0,32.25,25,122.25,False,14-16h
+301,2023-01-19,1,19,4,Studio,12.6,7.2,Aucune réclamation,45.0,30.44,0,75.44,False,19-20h
+302,2023-07-13,7,17,2,Suite,39.0,4.8,Aucune réclamation,120.0,31.48,0,151.48,True,17-18h
+303,2023-07-16,7,17,3,Studio,36.4,7.2,Check-in tardif,45.0,28.22,25,98.22,True,17-18h
+304,2023-08-21,8,16,4,Appartement T2,35.6,7.5,Bruit voisins,65.0,12.66,25,102.66,True,14-16h
+305,2023-09-22,9,20,3,Appartement T2,12.0,5.8,Check-in tardif,65.0,30.31,25,120.31,False,19-20h
+306,2023-12-22,12,17,4,Appartement T3,40.5,7.8,Aucune réclamation,85.0,11.92,0,96.92,True,17-18h
+307,2023-07-07,7,15,10,Appartement T2,21.9,7.2,Aucune réclamation,65.0,42.88,0,107.88,True,14-16h
+308,2023-04-28,4,18,7,Appartement T3,1.4,4.4,Bruit voisins,85.0,47.19,25,157.19,False,17-18h
+309,2023-10-17,10,15,3,Studio,5.2,5.3,Ménage insuffisant,45.0,16.33,25,86.33,False,14-16h
+310,2023-04-09,4,16,1,Appartement T3,10.1,5.9,Ménage insuffisant,85.0,35.25,25,145.25,False,14-16h
+311,2023-06-09,6,17,14,Studio,18.1,6.4,Aucune réclamation,45.0,25.91,0,70.91,True,17-18h
+312,2023-01-29,1,19,5,Appartement T3,8.2,7.0,Aucune réclamation,85.0,35.31,0,120.31,False,19-20h
+313,2023-01-10,1,17,1,Appartement T2,8.8,5.7,Bruit voisins,65.0,23.81,25,113.81,False,17-18h
+314,2023-12-17,12,18,7,Appartement T3,6.5,5.7,Ménage insuffisant,85.0,31.53,25,141.53,True,17-18h
+315,2023-11-01,11,22,7,Appartement T2,12.7,5.7,Ménage insuffisant,65.0,29.01,25,119.01,False,21-23h
+316,2023-09-11,9,15,3,Appartement T2,11.8,6.0,Aucune réclamation,65.0,38.6,0,103.6,False,14-16h
+317,2023-05-29,5,16,3,Appartement T2,5.5,5.0,Bruit voisins,65.0,12.18,25,102.18,False,14-16h
+318,2023-03-05,3,17,2,Appartement T2,0.1,6.0,Aucune réclamation,65.0,15.97,0,80.97,False,17-18h
+319,2023-02-26,2,17,1,Studio,0.1,8.7,Aucune réclamation,45.0,20.43,0,65.43,False,17-18h
+320,2023-04-02,4,17,2,Studio,3.5,3.4,Check-in tardif,45.0,28.61,25,98.61,False,17-18h
+321,2023-07-19,7,20,5,Studio,41.3,6.1,Bruit voisins,45.0,26.34,25,96.34,True,19-20h
+322,2023-09-18,9,18,1,Studio,2.1,7.6,Ménage insuffisant,45.0,13.77,25,83.77,False,17-18h
+323,2023-08-29,8,18,2,Appartement T3,24.5,6.6,Aucune réclamation,85.0,18.69,0,103.69,True,17-18h
+324,2023-04-12,4,16,2,Studio,2.0,4.3,Aucune réclamation,45.0,17.16,0,62.16,False,14-16h
+325,2023-12-14,12,19,3,Suite,19.8,6.6,Aucune réclamation,120.0,16.41,0,136.41,True,19-20h
+326,2023-09-26,9,21,7,Studio,19.1,5.4,Équipement défaillant,45.0,37.33,25,107.33,False,21-23h
+327,2023-07-21,7,19,2,Studio,27.5,4.1,Ménage insuffisant,45.0,31.12,25,101.12,True,19-20h
+328,2023-08-11,8,14,2,Appartement T3,13.6,6.5,Aucune réclamation,85.0,16.52,0,101.52,True,14-16h
+329,2023-06-02,6,18,4,Appartement T2,11.6,9.1,Aucune réclamation,65.0,21.0,0,86.0,True,17-18h
+330,2023-04-01,4,15,3,Appartement T2,0.2,6.8,Bruit voisins,65.0,21.73,25,111.73,False,14-16h
+331,2023-05-10,5,16,2,Appartement T2,5.2,6.3,Aucune réclamation,65.0,39.29,0,104.29,False,14-16h
+332,2023-10-03,10,15,3,Appartement T2,8.7,5.3,Aucune réclamation,65.0,38.64,0,103.64,False,14-16h
+333,2023-01-06,1,18,1,Studio,1.0,5.6,Équipement défaillant,45.0,34.0,25,104.0,False,17-18h
+334,2023-02-12,2,18,2,Suite,2.7,7.2,Aucune réclamation,120.0,17.25,0,137.25,False,17-18h
+335,2023-01-17,1,15,3,Suite,4.1,8.0,Aucune réclamation,120.0,12.04,0,132.04,False,14-16h
+336,2023-01-15,1,17,3,Appartement T2,20.2,6.3,Aucune réclamation,65.0,19.51,0,84.51,False,17-18h
+337,2023-11-08,11,17,7,Studio,40.0,5.6,Ménage insuffisant,45.0,33.0,25,103.0,False,17-18h
+338,2023-09-14,9,17,2,Appartement T2,0.4,8.3,Check-in tardif,65.0,25.18,25,115.18,False,17-18h
+339,2023-06-22,6,15,3,Studio,25.4,7.6,Aucune réclamation,45.0,33.33,0,78.33,True,14-16h
+340,2023-02-05,2,17,4,Studio,3.7,5.8,Bruit voisins,45.0,35.75,25,105.75,False,17-18h
+341,2023-06-28,6,18,1,Studio,22.3,5.1,Check-in tardif,45.0,35.35,25,105.35,True,17-18h
+342,2023-06-22,6,15,4,Appartement T2,24.9,5.0,Check-in tardif,65.0,20.79,25,110.79,True,14-16h
+343,2023-03-05,3,15,2,Appartement T3,20.0,6.9,Check-in tardif,85.0,30.62,25,140.62,False,14-16h
+344,2023-06-07,6,17,10,Appartement T2,31.5,5.8,Aucune réclamation,65.0,34.39,0,99.39,True,17-18h
+345,2023-05-26,5,21,1,Appartement T2,11.8,7.3,Aucune réclamation,65.0,11.83,0,76.83,False,21-23h
+346,2023-08-13,8,18,3,Appartement T2,19.3,5.5,Bruit voisins,65.0,31.05,25,121.05,True,17-18h
+347,2023-08-20,8,18,1,Studio,21.5,4.9,Ménage insuffisant,45.0,10.29,25,80.29,True,17-18h
+348,2023-01-17,1,17,14,Appartement T2,2.3,4.3,Bruit voisins,65.0,37.28,25,127.28,False,17-18h
+349,2023-05-17,5,17,3,Suite,6.6,7.8,Aucune réclamation,120.0,19.88,0,139.88,False,17-18h
+350,2023-08-16,8,14,3,Studio,12.2,7.2,Aucune réclamation,45.0,30.8,0,75.8,True,14-16h
+351,2023-07-03,7,18,1,Appartement T3,16.8,6.3,Bruit voisins,85.0,32.99,25,142.99,True,17-18h
+352,2023-11-08,11,20,4,Appartement T2,6.6,6.7,Aucune réclamation,65.0,19.12,0,84.12,False,19-20h
+353,2023-08-28,8,18,2,Appartement T2,20.3,8.3,Aucune réclamation,65.0,34.35,0,99.35,True,17-18h
+354,2023-03-01,3,19,7,Appartement T2,20.0,6.0,Aucune réclamation,65.0,33.82,0,98.82,False,19-20h
+355,2023-01-26,1,18,2,Appartement T2,0.9,9.5,Aucune réclamation,65.0,23.39,0,88.39,False,17-18h
+356,2023-08-22,8,15,2,Appartement T3,11.8,3.5,Bruit voisins,85.0,31.81,25,141.81,True,14-16h
+357,2023-01-10,1,20,1,Suite,9.3,7.8,Aucune réclamation,120.0,30.79,0,150.79,False,19-20h
+358,2023-08-02,8,15,3,Appartement T2,11.1,6.4,Check-in tardif,65.0,39.62,25,129.62,True,14-16h
+359,2023-12-09,12,17,3,Studio,17.6,6.0,Aucune réclamation,45.0,16.75,0,61.75,True,17-18h
+360,2023-07-29,7,15,1,Appartement T2,16.4,7.6,Aucune réclamation,65.0,29.87,0,94.87,True,14-16h
+361,2023-05-22,5,14,5,Suite,16.1,8.6,Aucune réclamation,120.0,28.29,0,148.29,False,14-16h
+362,2023-08-23,8,17,3,Studio,11.7,4.5,Aucune réclamation,45.0,37.45,0,82.45,True,17-18h
+363,2023-06-16,6,16,3,Appartement T2,39.4,5.3,Ménage insuffisant,65.0,14.69,25,104.69,True,14-16h
+364,2023-07-18,7,17,3,Appartement T2,15.9,2.6,Équipement défaillant,65.0,32.55,25,122.55,True,17-18h
+365,2023-12-09,12,17,3,Appartement T2,23.7,5.8,Aucune réclamation,65.0,27.05,0,92.05,True,17-18h
+366,2023-05-21,5,14,3,Studio,6.9,9.3,Aucune réclamation,45.0,18.24,0,63.24,False,14-16h
+367,2023-12-16,12,15,2,Appartement T2,15.7,5.0,Ménage insuffisant,65.0,24.23,25,114.23,True,14-16h
+368,2023-11-26,11,17,2,Suite,11.4,4.2,Ménage insuffisant,120.0,20.01,25,165.01,False,17-18h
+369,2023-03-13,3,16,7,Studio,2.7,5.7,Ménage insuffisant,45.0,42.38,25,112.38,False,14-16h
+370,2023-01-26,1,18,10,Studio,3.5,9.9,Aucune réclamation,45.0,51.67,0,96.67,False,17-18h
+371,2023-02-06,2,18,2,Suite,18.0,4.8,Aucune réclamation,120.0,27.08,0,147.08,False,17-18h
+372,2023-01-07,1,19,2,Studio,23.4,4.1,Bruit voisins,45.0,28.95,25,98.95,False,19-20h
+373,2023-02-04,2,18,4,Appartement T3,17.8,7.4,Équipement défaillant,85.0,25.56,25,135.56,False,17-18h
+374,2023-09-06,9,17,3,Appartement T2,4.4,9.6,Aucune réclamation,65.0,11.53,0,76.53,False,17-18h
+375,2023-01-26,1,18,1,Studio,12.1,7.0,Aucune réclamation,45.0,16.99,0,61.99,False,17-18h
+376,2023-04-27,4,16,2,Appartement T3,5.2,4.4,Équipement défaillant,85.0,24.76,25,134.76,False,14-16h
+377,2023-11-04,11,16,4,Appartement T2,5.5,8.3,Équipement défaillant,65.0,19.31,25,109.31,False,14-16h
+378,2023-01-09,1,19,4,Appartement T2,1.8,7.9,Équipement défaillant,65.0,15.45,25,105.45,False,19-20h
+379,2023-10-24,10,17,1,Appartement T2,7.2,6.6,Bruit voisins,65.0,25.12,25,115.12,False,17-18h
+380,2023-04-13,4,19,2,Appartement T2,1.6,5.0,Équipement défaillant,65.0,19.68,25,109.68,False,19-20h
+381,2023-02-13,2,19,2,Studio,3.2,7.4,Aucune réclamation,45.0,17.74,0,62.74,False,19-20h
+382,2023-09-11,9,19,4,Appartement T2,15.4,6.9,Aucune réclamation,65.0,23.92,0,88.92,False,19-20h
+383,2023-08-17,8,20,1,Suite,21.8,7.5,Aucune réclamation,120.0,14.0,0,134.0,True,19-20h
+384,2023-11-16,11,17,1,Studio,0.6,9.2,Aucune réclamation,45.0,37.83,0,82.83,False,17-18h
+385,2023-09-25,9,16,5,Appartement T2,0.6,7.0,Ménage insuffisant,65.0,36.03,25,126.03,False,14-16h
+386,2023-10-20,10,17,2,Studio,22.6,4.1,Check-in tardif,45.0,31.23,25,101.23,False,17-18h
+387,2023-04-13,4,17,4,Appartement T3,5.7,7.5,Ménage insuffisant,85.0,13.19,25,123.19,False,17-18h
+388,2023-03-06,3,18,2,Studio,4.2,6.3,Bruit voisins,45.0,33.28,25,103.28,False,17-18h
+389,2023-10-01,10,18,1,Suite,13.3,8.1,Aucune réclamation,120.0,34.24,0,154.24,False,17-18h
+390,2023-10-21,10,18,2,Appartement T2,14.5,8.9,Aucune réclamation,65.0,33.03,0,98.03,False,17-18h
+391,2023-12-27,12,17,4,Studio,13.1,4.3,Ménage insuffisant,45.0,13.42,25,83.42,True,17-18h
+392,2023-05-31,5,16,7,Studio,9.5,5.7,Check-in tardif,45.0,44.32,25,114.32,False,14-16h
+393,2023-05-16,5,17,5,Studio,11.8,6.5,Aucune réclamation,45.0,35.03,0,80.03,False,17-18h
+394,2023-10-10,10,15,2,Appartement T2,8.5,3.9,Bruit voisins,65.0,27.32,25,117.32,False,14-16h
+395,2023-05-05,5,20,4,Studio,13.1,6.0,Équipement défaillant,45.0,29.39,25,99.39,False,19-20h
+396,2023-12-05,12,16,2,Appartement T3,36.6,9.5,Aucune réclamation,85.0,23.75,0,108.75,True,14-16h
+397,2023-11-09,11,16,2,Appartement T2,6.2,5.1,Aucune réclamation,65.0,25.86,0,90.86,False,14-16h
+398,2023-06-06,6,14,7,Studio,20.3,5.4,Bruit voisins,45.0,26.03,25,96.03,True,14-16h
+399,2023-10-01,10,18,1,Appartement T2,4.4,6.7,Check-in tardif,65.0,29.17,25,119.17,False,17-18h
+400,2023-10-02,10,18,1,Appartement T2,0.3,7.6,Aucune réclamation,65.0,12.44,0,77.44,False,17-18h
+401,2023-02-07,2,16,2,Studio,1.1,5.8,Équipement défaillant,45.0,23.05,25,93.05,False,14-16h
+402,2023-11-25,11,15,1,Studio,11.6,4.2,Ménage insuffisant,45.0,18.78,25,88.78,False,14-16h
+403,2023-07-03,7,17,2,Studio,20.0,7.3,Aucune réclamation,45.0,26.36,0,71.36,True,17-18h
+404,2023-10-28,10,16,3,Appartement T2,4.3,5.0,Ménage insuffisant,65.0,14.0,25,104.0,False,14-16h
+405,2023-04-27,4,18,3,Appartement T2,5.9,4.7,Aucune réclamation,65.0,30.75,0,95.75,False,17-18h
+406,2023-11-22,11,18,7,Appartement T2,0.4,7.4,Bruit voisins,65.0,48.85,25,138.85,False,17-18h
+407,2023-05-22,5,17,5,Appartement T3,28.9,8.1,Aucune réclamation,85.0,14.9,0,99.9,False,17-18h
+408,2023-01-04,1,16,2,Appartement T3,2.1,6.0,Check-in tardif,85.0,13.13,25,123.13,False,14-16h
+409,2023-11-26,11,22,2,Appartement T2,12.8,5.9,Check-in tardif,65.0,14.37,25,104.37,False,21-23h
+410,2023-02-03,2,17,2,Appartement T3,2.9,7.2,Ménage insuffisant,85.0,36.31,25,146.31,False,17-18h
+411,2023-04-27,4,18,3,Studio,2.1,6.2,Check-in tardif,45.0,25.85,25,95.85,False,17-18h
+412,2023-12-12,12,15,2,Studio,7.0,8.4,Aucune réclamation,45.0,24.02,0,69.02,True,14-16h
+413,2023-12-13,12,17,4,Studio,15.8,6.7,Aucune réclamation,45.0,13.2,0,58.2,True,17-18h
+414,2023-07-28,7,14,3,Studio,37.7,6.6,Check-in tardif,45.0,29.49,25,99.49,True,14-16h
+415,2023-08-18,8,17,3,Appartement T2,18.8,6.0,Check-in tardif,65.0,36.04,25,126.04,True,17-18h
+416,2023-06-13,6,21,3,Suite,29.9,6.9,Aucune réclamation,120.0,34.85,0,154.85,True,21-23h
+417,2023-04-17,4,17,2,Studio,10.8,5.7,Aucune réclamation,45.0,28.78,0,73.78,False,17-18h
+418,2023-04-30,4,14,10,Studio,15.1,5.9,Équipement défaillant,45.0,27.26,25,97.26,False,14-16h
+419,2023-09-02,9,14,5,Appartement T2,4.4,4.9,Check-in tardif,65.0,13.37,25,103.37,False,14-16h
+420,2023-10-01,10,17,1,Suite,2.9,5.2,Check-in tardif,120.0,11.48,25,156.48,False,17-18h
+421,2023-10-16,10,16,7,Studio,3.1,6.5,Aucune réclamation,45.0,32.72,0,77.72,False,14-16h
+422,2023-10-15,10,14,3,Appartement T2,10.0,4.5,Ménage insuffisant,65.0,14.07,25,104.07,False,14-16h
+423,2023-02-03,2,18,7,Studio,13.6,9.8,Aucune réclamation,45.0,32.8,0,77.8,False,17-18h
+424,2023-06-29,6,17,5,Studio,7.2,7.4,Check-in tardif,45.0,21.55,25,91.55,True,17-18h
+425,2023-01-21,1,16,3,Suite,3.7,9.7,Aucune réclamation,120.0,38.29,0,158.29,False,14-16h
+426,2023-07-20,7,20,1,Suite,36.2,3.9,Ménage insuffisant,120.0,28.31,25,173.31,True,19-20h
+427,2023-06-10,6,15,2,Studio,26.6,5.4,Équipement défaillant,45.0,35.05,25,105.05,True,14-16h
+428,2023-11-20,11,21,3,Suite,44.4,3.2,Check-in tardif,120.0,31.31,25,176.31,False,21-23h
+429,2023-05-08,5,16,4,Appartement T2,11.2,6.4,Aucune réclamation,65.0,13.38,0,78.38,False,14-16h
+430,2023-02-12,2,20,2,Appartement T3,8.4,4.7,Ménage insuffisant,85.0,32.08,25,142.08,False,19-20h
+431,2023-02-22,2,18,1,Appartement T2,7.1,7.3,Équipement défaillant,65.0,18.25,25,108.25,False,17-18h
+432,2023-10-05,10,19,5,Appartement T2,8.7,5.3,Équipement défaillant,65.0,29.17,25,119.17,False,19-20h
+433,2023-08-14,8,22,14,Appartement T2,27.5,6.4,Équipement défaillant,65.0,35.23,25,125.23,True,21-23h
+434,2023-02-06,2,16,3,Appartement T2,6.3,8.0,Aucune réclamation,65.0,39.93,0,104.93,False,14-16h
+435,2023-01-31,1,21,2,Studio,16.6,9.8,Aucune réclamation,45.0,17.91,0,62.91,False,21-23h
+436,2023-09-13,9,17,2,Studio,1.5,5.7,Aucune réclamation,45.0,18.37,0,63.37,False,17-18h
+437,2023-01-27,1,17,1,Studio,12.1,7.2,Bruit voisins,45.0,37.92,25,107.92,False,17-18h
+438,2023-10-27,10,16,7,Appartement T2,7.0,8.8,Aucune réclamation,65.0,25.74,0,90.74,False,14-16h
+439,2023-09-15,9,17,1,Studio,24.3,4.2,Check-in tardif,45.0,30.9,25,100.9,False,17-18h
+440,2023-01-30,1,16,3,Appartement T2,0.3,7.2,Ménage insuffisant,65.0,31.76,25,121.76,False,14-16h
+441,2023-01-31,1,17,2,Suite,2.5,6.3,Ménage insuffisant,120.0,35.09,25,180.09,False,17-18h
+442,2023-12-26,12,17,3,Studio,20.3,5.4,Check-in tardif,45.0,39.23,25,109.23,True,17-18h
+443,2023-05-17,5,18,4,Appartement T2,2.8,6.4,Aucune réclamation,65.0,39.27,0,104.27,False,17-18h
+444,2023-05-15,5,19,5,Appartement T2,10.0,6.3,Aucune réclamation,65.0,11.96,0,76.96,False,19-20h
+445,2023-10-23,10,17,2,Appartement T3,11.4,9.7,Aucune réclamation,85.0,34.66,0,119.66,False,17-18h
+446,2023-12-11,12,16,1,Studio,15.6,5.7,Équipement défaillant,45.0,29.39,25,99.39,True,14-16h
+447,2023-12-25,12,16,1,Appartement T2,22.8,6.2,Check-in tardif,65.0,29.42,25,119.42,True,14-16h
+448,2023-10-02,10,16,7,Appartement T3,5.7,4.9,Ménage insuffisant,85.0,28.85,25,138.85,False,14-16h
+449,2023-05-17,5,15,7,Suite,3.7,5.0,Check-in tardif,120.0,44.51,25,189.51,False,14-16h
+450,2023-01-31,1,16,3,Appartement T2,21.6,6.9,Check-in tardif,65.0,39.47,25,129.47,False,14-16h
+451,2023-10-10,10,16,4,Appartement T2,14.1,4.0,Ménage insuffisant,65.0,37.35,25,127.35,False,14-16h
+452,2023-07-23,7,21,4,Appartement T2,37.7,4.6,Bruit voisins,65.0,23.17,25,113.17,True,21-23h
+453,2023-06-04,6,17,2,Appartement T3,25.2,5.6,Équipement défaillant,85.0,11.2,25,121.2,True,17-18h
+454,2023-11-26,11,16,7,Appartement T2,5.0,7.5,Aucune réclamation,65.0,35.87,0,100.87,False,14-16h
+455,2023-02-10,2,17,3,Studio,20.3,6.7,Aucune réclamation,45.0,34.79,0,79.79,False,17-18h
+456,2023-06-29,6,15,2,Suite,17.0,7.6,Aucune réclamation,120.0,31.04,0,151.04,True,14-16h
+457,2023-01-05,1,17,3,Appartement T2,10.4,8.1,Aucune réclamation,65.0,23.78,0,88.78,False,17-18h
+458,2023-06-20,6,18,1,Appartement T2,31.2,6.1,Check-in tardif,65.0,11.65,25,101.65,True,17-18h
+459,2023-01-21,1,17,2,Studio,2.6,6.2,Aucune réclamation,45.0,22.81,0,67.81,False,17-18h
+460,2023-02-13,2,17,4,Appartement T2,13.2,6.9,Aucune réclamation,65.0,24.07,0,89.07,False,17-18h
+461,2023-02-12,2,22,1,Appartement T2,11.6,7.1,Ménage insuffisant,65.0,37.86,25,127.86,False,21-23h
+462,2023-08-25,8,20,4,Appartement T2,18.4,6.7,Check-in tardif,65.0,29.23,25,119.23,True,19-20h
+463,2023-09-29,9,18,2,Studio,3.3,5.8,Aucune réclamation,45.0,19.35,0,64.35,False,17-18h
+464,2023-08-01,8,17,2,Appartement T2,44.7,5.6,Check-in tardif,65.0,25.76,25,115.76,True,17-18h
+465,2023-12-17,12,18,2,Suite,23.2,2.9,Équipement défaillant,120.0,11.98,25,156.98,True,17-18h
+466,2023-05-17,5,16,2,Studio,9.7,5.9,Équipement défaillant,45.0,39.18,25,109.18,False,14-16h
+467,2023-04-14,4,17,4,Suite,10.4,8.1,Bruit voisins,120.0,20.8,25,165.8,False,17-18h
+468,2023-11-13,11,14,2,Appartement T2,6.6,4.7,Check-in tardif,65.0,24.34,25,114.34,False,14-16h
+469,2023-03-23,3,17,3,Appartement T3,23.5,4.3,Check-in tardif,85.0,20.66,25,130.66,False,17-18h
+470,2023-12-17,12,17,3,Appartement T3,13.0,6.6,Ménage insuffisant,85.0,30.48,25,140.48,True,17-18h
+471,2023-01-05,1,16,4,Appartement T2,3.8,4.1,Ménage insuffisant,65.0,29.87,25,119.87,False,14-16h
+472,2023-12-20,12,21,10,Appartement T2,27.6,6.3,Aucune réclamation,65.0,46.46,0,111.46,True,21-23h
+473,2023-01-16,1,20,4,Appartement T3,18.6,6.3,Bruit voisins,85.0,18.04,25,128.04,False,19-20h
+474,2023-11-21,11,18,2,Appartement T2,10.6,5.0,Équipement défaillant,65.0,19.47,25,109.47,False,17-18h
+475,2023-07-12,7,17,1,Studio,21.5,5.2,Bruit voisins,45.0,13.76,25,83.76,True,17-18h
+476,2023-12-28,12,19,2,Appartement T2,17.2,8.0,Aucune réclamation,65.0,29.67,0,94.67,True,19-20h
+477,2023-01-27,1,15,3,Appartement T3,14.6,6.2,Bruit voisins,85.0,11.19,25,121.19,False,14-16h
+478,2023-07-21,7,19,1,Appartement T3,13.1,6.1,Check-in tardif,85.0,27.93,25,137.93,True,19-20h
+479,2023-12-19,12,15,3,Appartement T3,22.1,6.6,Aucune réclamation,85.0,36.09,0,121.09,True,14-16h
+480,2023-07-10,7,19,3,Appartement T2,39.1,7.2,Aucune réclamation,65.0,36.72,0,101.72,True,19-20h
+481,2023-08-18,8,16,2,Appartement T3,11.9,5.5,Bruit voisins,85.0,23.47,25,133.47,True,14-16h
+482,2023-09-11,9,19,5,Studio,2.1,8.0,Aucune réclamation,45.0,23.78,0,68.78,False,19-20h
+483,2023-06-15,6,21,1,Appartement T2,24.6,4.6,Check-in tardif,65.0,12.31,25,102.31,True,21-23h
+484,2023-08-17,8,15,1,Studio,32.4,4.8,Check-in tardif,45.0,30.12,25,100.12,True,14-16h
+485,2023-08-01,8,17,4,Studio,20.1,4.3,Ménage insuffisant,45.0,34.64,25,104.64,True,17-18h
+486,2023-11-25,11,22,3,Appartement T2,41.5,4.8,Ménage insuffisant,65.0,17.34,25,107.34,False,21-23h
+487,2023-01-17,1,17,4,Appartement T2,0.4,6.5,Aucune réclamation,65.0,22.64,0,87.64,False,17-18h
+488,2023-04-13,4,19,3,Appartement T2,5.6,4.5,Check-in tardif,65.0,35.17,25,125.17,False,19-20h
+489,2023-12-12,12,17,2,Appartement T2,15.6,5.9,Check-in tardif,65.0,36.31,25,126.31,True,17-18h
+490,2023-11-21,11,17,5,Appartement T2,15.9,7.4,Aucune réclamation,65.0,17.3,0,82.3,False,17-18h
+491,2023-06-15,6,16,5,Studio,7.8,8.2,Aucune réclamation,45.0,26.52,0,71.52,True,14-16h
+492,2023-08-14,8,16,4,Appartement T2,27.0,4.9,Ménage insuffisant,65.0,15.77,25,105.77,True,14-16h
+493,2023-04-11,4,18,2,Studio,6.4,7.8,Aucune réclamation,45.0,13.06,0,58.06,False,17-18h
+494,2023-03-10,3,17,3,Studio,4.0,6.5,Ménage insuffisant,45.0,37.33,25,107.33,False,17-18h
+495,2023-06-18,6,17,2,Appartement T2,16.0,7.8,Aucune réclamation,65.0,34.62,0,99.62,True,17-18h
+496,2023-05-09,5,17,1,Appartement T2,16.0,6.1,Aucune réclamation,65.0,32.8,0,97.8,False,17-18h
+497,2023-08-01,8,17,7,Appartement T2,19.3,7.1,Aucune réclamation,65.0,26.46,0,91.46,True,17-18h
+498,2023-01-29,1,19,1,Appartement T2,3.0,6.4,Ménage insuffisant,65.0,35.31,25,125.31,False,19-20h
+499,2023-12-21,12,22,10,Appartement T2,20.0,5.5,Ménage insuffisant,65.0,38.14,25,128.14,True,21-23h
+500,2023-12-25,12,17,3,Appartement T3,32.5,2.8,Bruit voisins,85.0,20.27,25,130.27,True,17-18h
