@@ -1,21 +1,24 @@
-# Analytics Conciergerie – Booking Strasbourg
+# Analytics Conciergerie – Booking 
 
 > **Projet Bachelor Business & Data · GitHub Project #2**  
-> Responsable Conciergerie @ Booking Strasbourg · 4 mois · Équipe de 2 personnes
-
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://python.org)
 [![Data](https://img.shields.io/badge/Dataset-500%20réservations-green)](#)
 [![Objectif](https://img.shields.io/badge/Objectif-Réduire%20les%20coûts%20-10%25-orange)](#)
 
+
+---
+![Aperçu du Dashboard](assets/dashboard.png)
+<p align="center"><img src="assets/dashboard.png" width="800"></p>
+---
+![Aperçu du Dashboard](assets/dashboard2.png)
+<p align="center"><img src="assets/dashboard2.png" width="800"></p>
+---
+![Aperçu du Dashboard](assets/dashboard3.png)
+<p align="center"><img src="assets/dashboard3.png" width="800"></p>
+---
 ---
 
 ## Contexte & Objectif Business
-
-En tant que **Responsable Conciergerie chez Booking à Strasbourg**, j'encadrais une équipe de 2 personnes et gérais au quotidien :
-
-- La **planification des plannings** d'accueil et de ménage
-- Le **traitement des réclamations** clients (ménage, bruit, check-in tardif)
-- L'**optimisation des flux** lors des pics de réservation
 
 Ce projet démontre comment la **data permet de prendre de meilleures décisions opérationnelles** : au lieu de réagir aux problèmes, on les anticipe.
 
